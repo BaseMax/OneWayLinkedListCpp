@@ -320,8 +320,10 @@ void OneWayLinkedList::reverseRecursive(Node* node) {
         this->head = node;
         return;
     }
+
     // Reverse the rest of the list
     reverseRecursive(node->next);
+
     // Reverse the current node
     Node* next = node->next;
     next->next = node;
