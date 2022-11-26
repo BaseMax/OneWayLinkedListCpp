@@ -122,6 +122,145 @@ void OneWayLinkedList::deleteAll() {
     this->size = 0;
 }
 
+// Delete a node with a specific data
+void OneWayLinkedList::deleteNode(int data) {
+    Node* node = this->head;
+    Node* prev = NULL;
+    while (node != NULL) {
+        if (node->data == data) {
+            if (prev == NULL) {
+                this->head = node->next;
+            } else {
+                prev->next = node->next;
+            }
+            delete node;
+            this->size--;
+            return;
+        }
+        prev = node;
+        node = node->next;
+    }
+}
+
+// Delete a node after a node with a specific index
+void OneWayLinkedList::deleteNodeAfterIndex(int index) {
+    if (index < 0 || index >= this->size) {
+        return;
+    }
+
+    Node* node = this->head;
+    Node* prev = NULL;
+    int i = 0;
+    while (node != NULL) {
+        if (i == index) {
+            if (prev == NULL) {
+                this->head = node->next;
+            } else {
+                prev->next = node->next;
+            }
+            delete node;
+            this->size--;
+            return;
+        }
+        prev = node;
+        node = node->next;
+        i++;
+    }
+}
+
+// Delete a node before a node with a specific data
+void OneWayLinkedList::deleteNodeBeforeData(int data) {
+    Node* node = this->head;
+    Node* prev = NULL;
+    Node* prevPrev = NULL;
+    while (node != NULL) {
+        if (node->data == data) {
+            if (prevPrev == NULL) {
+                this->head = node;
+            } else {
+                prevPrev->next = node;
+            }
+            delete prev;
+            this->size--;
+            return;
+        }
+        prevPrev = prev;
+        prev = node;
+        node = node->next;
+    }
+}
+
+
+// Delete a node with a specific index
+void OneWayLinkedList::deleteNodeByIndex(int index) {
+    if (index < 0 || index >= this->size) {
+        return;
+    }
+
+    Node* node = this->head;
+    Node* prev = NULL;
+    int i = 0;
+    while (node != NULL) {
+        if (i == index) {
+            if (prev == NULL) {
+                this->head = node->next;
+            } else {
+                prev->next = node->next;
+            }
+            delete node;
+            this->size--;
+            return;
+        }
+        prev = node;
+        node = node->next;
+        i++;
+    }
+}
+
+// Delete a node after a node with a specific index
+void OneWayLinkedList::deleteNodeAfterData(int data) {
+    Node* node = this->head;
+    Node* prev = NULL;
+    while (node != NULL) {
+        if (prev != NULL && prev->data == data) {
+            prev->next = node->next;
+            delete node;
+            this->size--;
+            return;
+        }
+        prev = node;
+        node = node->next;
+    }
+}
+
+// Delete a node before a node with a specific index
+void OneWayLinkedList::deleteNodeBeforeIndex(int index) {
+    if (index < 0 || index >= this->size) {
+        return;
+    }
+
+    Node* node = this->head;
+    Node* prev = NULL;
+    Node* prevPrev = NULL;
+    int i = 0;
+    while (node != NULL) {
+        if (i == index) {
+            if (prevPrev == NULL) {
+                this->head = node;
+            } else {
+                prevPrev->next = node;
+            }
+            delete prev;
+            this->size--;
+            return;
+        }
+        prevPrev = prev;
+        prev = node;
+        node = node->next;
+        i++;
+    }
+}
+
 // Support delete operator
 // OneWayLinkedList::~OneWayLinkedList() {
 //     this->deleteAll();

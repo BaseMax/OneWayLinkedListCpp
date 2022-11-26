@@ -49,4 +49,19 @@ public:
 
     // Get the node by searching with index
     Node* getNodeByIndex(int index);
+
+    // Delete a node after a node with a specific index
+    void deleteNodeAfterIndex(int index);
+
+    // Delete a node before a node with a specific data
+    void deleteNodeBeforeData(int data);
+
+    // Delete a node with a specific index
+    void deleteNodeByIndex(int index);
+
+    // Delete a node after a node with a specific index
+    void deleteNodeAfterData(int data);
+
+    // Delete a node before a node with a specific index
+    void deleteNodeBeforeIndex(int index);
 };
