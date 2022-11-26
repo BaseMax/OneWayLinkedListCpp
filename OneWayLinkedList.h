@@ -10,7 +10,9 @@ public:
     int data; // Data
     Node* next; // Pointer to next node
 
-    Node(int data); // Constructor
+    // Node Constructor
+    Node(int data);
+};
 
 class OneWayLinkedList {
 private:
@@ -18,7 +20,12 @@ private:
     Node* tail; // Pointer to tail node and Tail is the last node in the list.
     int size; // Size of list
 public:
-    OneWayLinkedList(); // Constructor
-    void OneWayLinkedList::add(int data);
-    void OneWayLinkedList::print();
+    // OneWayLinkedList Constructor
+    OneWayLinkedList();
+
+    // Add new node to the end of the list
+    void add(int data);
+    
+    // Print all nodes
+    void print();
 };
