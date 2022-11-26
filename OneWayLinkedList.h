@@ -37,4 +37,16 @@ public:
 
     // Support delete operator
     // ~OneWayLinkedList();
+
+    // Check has a node with a specific data in the list or not
+    bool has(int data);
+
+    // Get the size of the list
+    int getSize();
+    
+    // Get the node by searching with data
+    Node* getNode(int data);
+
+    // Get the node by searching with index
+    Node* getNodeByIndex(int index);
 };

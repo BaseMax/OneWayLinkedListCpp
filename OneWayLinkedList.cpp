@@ -48,6 +48,53 @@ void OneWayLinkedList::addEnd(int data) {
     this->size++;
 }
 
+// Check has a node with a specific data in the list or not
+bool OneWayLinkedList::has(int data) {
+    Node* node = this->head;
+    while(node != NULL) {
+        if(node->data == data) {
+            return true;
+        }
+        node = node->next;
+    }
+    return false;
+}
+
+// Get the size of the list
+int OneWayLinkedList::getSize() {
+    return this->size;
+}
+
+// Get the node by searching with data
+Node* OneWayLinkedList::getNode(int data) {
+    Node* node = this->head;
+    while(node != NULL) {
+        if(node->data == data) {
+            return node;
+        }
+        node = node->next;
+    }
+    return NULL;
+}
+
+// Get the node by searching with index
+Node* OneWayLinkedList::getNodeByIndex(int index) {
+    if (index < 0 || index >= this->size) {
+        return NULL;
+    }
+
+    Node* node = this->head;
+    int i = 0;
+    while(node != NULL) {
+        if(i == index) {
+            return node;
+        }
+        node = node->next;
+        i++;
+    }
+    return NULL;
+}
+
 // Print all nodes
 void OneWayLinkedList::print() {
     if (this->head == NULL) {
