@@ -6,6 +6,7 @@ using namespace std;
 int main(int argc, char** argv) {
     // Create new list
     OneWayLinkedList* list = new OneWayLinkedList();
+
     // Add some nodes
     list->addEnd(1);
     list->addEnd(2);

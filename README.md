@@ -7,6 +7,7 @@ This is a simple implementation of a one-way linked-list in C++.
 ```c++
 // Create new list
 OneWayLinkedList* list = new OneWayLinkedList();
+
 // Add some nodes
 list->addEnd(1);
 list->addEnd(2);
@@ -23,9 +24,14 @@ list->print();
 cout << "Size: " << list->getSize() << endl;
 
 // Reverse the current list
+cout << "Reverse the list" << endl;
 list->reverse();
 
+// Print all nodes
+list->print();
+
 // Reverse the current list with a recursive function
+cout << "Reverse the list with a recursive function" << endl;
 list->reverseRecursive(list->getFirstNode());
 
 // Print all nodes
