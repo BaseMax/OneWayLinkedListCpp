@@ -4,28 +4,28 @@ This is a simple implementation of a one-way linked-list in C++.
 
 ## Functions
 
-- **OneWayLinkedList()**: Constructor
-- **addBegin(int data)**: Add new node to the beginning of the list
-- **void addEnd(int data)**: Add new node to the end of the list
-- **void print()**: Print all nodes
-- **void deleteAll()**: Delete all nodes
-- **bool has(int data)**: Check has a node with a specific data in the list or not
-- **int getSize()**: Get the size of the list
-- **Node* getNode(int data)**: Get the node by searching with data
-- **void deleteNode(int data)**: Delete a node with a specific data
-- **Node* getNodeByIndex(int index)**: Get the node by searching with index
-- **void deleteNodeAfterIndex(int index)**: Delete a node after a node with a specific index
-- **void deleteNodeBeforeData(int data)**: Delete a node before a node with a specific data
-- **void deleteNodeByIndex(int index)**: Delete a node with a specific index
-- **void deleteNodeAfterData(int data)**: Delete a node after a node with a specific index
-- **void deleteNodeBeforeIndex(int index)**: Delete a node before a node with a specific index
-- **int count()**: Count number of nodes
-- **int countRecursive(Node* node)**: Count number of nodes with a recursive function
-- **Node* getFirstNode()**: Get the first node
-- **Node* getLastNode()**: Get the last node
-- **void reverse()**: Reverse the list
-- **void reverseRecursive(Node* node)**: Reverse the list with a recursive function
-- **Node* getMiddleNode()**: Get the middle node
+- **`OneWayLinkedList()`**: Constructor
+- **`addBegin(int data)`**: Add new node to the beginning of the list
+- **`void addEnd(int data)`**: Add new node to the end of the list
+- **`void print()`**: Print all nodes
+- **`void deleteAll()`**: Delete all nodes
+- **`bool has(int data)`**: Check has a node with a specific data in the list or not
+- **`int getSize()`**: Get the size of the list
+- **`Node* getNode(int data)`**: Get the node by searching with data
+- **`void deleteNode(int data)`**: Delete a node with a specific data
+- **`Node* getNodeByIndex(int index)`**: Get the node by searching with index
+- **`void deleteNodeAfterIndex(int index)`**: Delete a node after a node with a specific index
+- **`void deleteNodeBeforeData(int data)`**: Delete a node before a node with a specific data
+- **`void deleteNodeByIndex(int index)`**: Delete a node with a specific index
+- **`void deleteNodeAfterData(int data)`**: Delete a node after a node with a specific index
+- **`void deleteNodeBeforeIndex(int index)`**: Delete a node before a node with a specific index
+- **`int count()`**: Count number of nodes
+- **`int countRecursive(Node* node)`**: Count number of nodes with a recursive function
+- **`Node* getFirstNode()`**: Get the first node
+- **`Node* getLastNode()`**: Get the last node
+- **`void reverse()`**: Reverse the list
+- **`void reverseRecursive(Node* node)`**: Reverse the list with a recursive function
+- **``Node* getMiddleNode()`**: Get the middle node
 
 ## Usage
 
