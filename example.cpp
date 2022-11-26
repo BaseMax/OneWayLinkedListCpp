@@ -21,6 +21,26 @@ int main(int argc, char** argv) {
     // Print the size of the list
     cout << "Size: " << list->getSize() << endl;
 
+    // Reverse the current list
+    list->reverse();
+
+    // Reverse the current list with a recursive function
+    list->reverseRecursive(list->getFirstNode());
+
+    // Print all nodes
+    list->print();
+
+    // Print the middle node
+    Node* middle = list->getMiddleNode();
+    if (middle != NULL) {
+        cout << "Middle node: " << middle->data << endl;
+    } else {
+        cout << "Middle node: NULL" << endl;
+    }
+
+    // Print all nodes
+    list->print();
+
     // Check has a node with a specific data in the list or not
     cout << "Has 110: " << list->has(110) << endl;
     cout << "Has 111: " << list->has(111) << endl;

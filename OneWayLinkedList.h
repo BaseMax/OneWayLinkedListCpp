@@ -79,4 +79,13 @@ public:
 
     // Get the last node
     Node* getLastNode();
+
+    // Reverse the list
+    void reverse();
+
+    // Reverse the list with a recursive function
+    void reverseRecursive(Node* node);
+
+    // Get the middle node
+    Node* getMiddleNode();
 };

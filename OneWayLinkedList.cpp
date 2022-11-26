@@ -84,7 +84,16 @@ Node* OneWayLinkedList::getFirstNode() {
 
 // Get the last node
 Node* OneWayLinkedList::getLastNode() {
-    return this->tail;
+    // return this->tail;
+
+    Node* node = this->head;
+    while(node != NULL) {
+        if(node->next == NULL) {
+            return node;
+        }
+        node = node->next;
+    }
+    return NULL;
 }
 
 // Get the node by searching with index
@@ -288,6 +297,42 @@ int OneWayLinkedList::countRecursive(Node* node) {
         return 0;
     }
     return 1 + countRecursive(node->next);
+}
+
+// Reverse the list
+void OneWayLinkedList::reverse() {
+    Node* prev = NULL;
+    Node* current = this->head;
+    Node* next = NULL;
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    this->head = prev;
+}
+
+void OneWayLinkedList::reverseRecursive(Node* node) {
+    if (node->next == NULL) {
+        this->head = node;
+        return;
+    }
+    reverseRecursive(node->next);
+    Node* next = node->next;
+    next->next = node;
+    node->next = NULL;
+}
+
+// Get the middle node
+Node* OneWayLinkedList::getMiddleNode() {
+    Node* slow = this->head;
+    Node* fast = this->head;
+    while (fast != NULL && fast->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
 }
 
 // Support delete operator
