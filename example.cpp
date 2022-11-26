@@ -18,11 +18,45 @@ int main(int argc, char** argv) {
     // Print all nodes
     list->print();
 
+    // Print the size of the list
+    cout << "Size: " << list->getSize() << endl;
+
+    // Check has a node with a specific data in the list or not
+    cout << "Has 110: " << list->has(110) << endl;
+    cout << "Has 111: " << list->has(111) << endl;
+
+    // Get the node by searching with data
+    Node* node = list->getNode(110);
+    if(node != NULL) {
+        cout << "Node data: " << node->data << endl;
+    } else {
+        cout << "Node not found" << endl;
+    }
+
+    // Get the node by searching with index
+    node = list->getNodeByIndex(0);
+    if(node != NULL) {
+        cout << "Node data: " << node->data << endl;
+    } else {
+        cout << "Node not found" << endl;
+    }
+
+    // Get the node by searching with index
+    node = list->getNodeByIndex(60);
+    if(node != NULL) {
+        cout << "Node data: " << node->data << endl;
+    } else {
+        cout << "Node not found" << endl;
+    }
+
     // Delete all nodes
     list->deleteAll();
 
     // Print all nodes
     list->print();
+
+    // Print the size of the list
+    cout << "Size: " << list->getSize() << endl;
 
     return 0;
 }
