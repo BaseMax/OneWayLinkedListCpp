@@ -313,14 +313,20 @@ void OneWayLinkedList::reverse() {
     this->head = prev;
 }
 
+// Reverse the list with a recursive function
 void OneWayLinkedList::reverseRecursive(Node* node) {
+    // If the node is the last node
     if (node->next == NULL) {
         this->head = node;
         return;
     }
+    // Reverse the rest of the list
     reverseRecursive(node->next);
+    // Reverse the current node
     Node* next = node->next;
     next->next = node;
+
+    // Set the next node to NULL
     node->next = NULL;
 }
 
