@@ -22,9 +22,14 @@ int main(int argc, char** argv) {
     cout << "Size: " << list->getSize() << endl;
 
     // Reverse the current list
+    cout << "Reverse the list" << endl;
     list->reverse();
 
+    // Print all nodes
+    list->print();
+
     // Reverse the current list with a recursive function
+    cout << "Reverse the list with a recursive function" << endl;
     list->reverseRecursive(list->getFirstNode());
 
     // Print all nodes
