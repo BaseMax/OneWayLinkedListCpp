@@ -49,6 +49,28 @@ int main(int argc, char** argv) {
         cout << "Node not found" << endl;
     }
 
+    // Print count of nodes
+    cout << "Count: " << list->count() << endl;
+
+    // Print count of nodes (recursive)
+    cout << "Count (recursive): " << list->countRecursive(list->getFirstNode()) << endl;
+
+    // Print the first node
+    node = list->getFirstNode();
+    if(node != NULL) {
+        cout << "First node data: " << node->data << endl;
+    } else {
+        cout << "Node not found" << endl;
+    }
+
+    // Print the last node
+    node = list->getLastNode();
+    if(node != NULL) {
+        cout << "Last node data: " << node->data << endl;
+    } else {
+        cout << "Node not found" << endl;
+    }
+
     // Delete all nodes
     list->deleteAll();
 

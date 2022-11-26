@@ -77,6 +77,16 @@ Node* OneWayLinkedList::getNode(int data) {
     return NULL;
 }
 
+// Get the first node
+Node* OneWayLinkedList::getFirstNode() {
+    return this->head;
+}
+
+// Get the last node
+Node* OneWayLinkedList::getLastNode() {
+    return this->tail;
+}
+
 // Get the node by searching with index
 Node* OneWayLinkedList::getNodeByIndex(int index) {
     if (index < 0 || index >= this->size) {

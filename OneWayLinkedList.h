@@ -73,4 +73,10 @@ public:
 
     // Count number of nodes with a recursive function
     int countRecursive(Node* node);
+
+    // Get the first node
+    Node* getFirstNode();
+
+    // Get the last node
+    Node* getLastNode();
 };
