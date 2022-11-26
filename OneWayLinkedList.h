@@ -23,9 +23,18 @@ public:
     // OneWayLinkedList Constructor
     OneWayLinkedList();
 
+    // Add new node to the beginning of the list
+    void addBegin(int data);
+
     // Add new node to the end of the list
-    void add(int data);
-    
+    void addEnd(int data);
+
     // Print all nodes
     void print();
+
+    // Delete all nodes
+    void deleteAll();
+
+    // Support delete operator
+    // ~OneWayLinkedList();
 };

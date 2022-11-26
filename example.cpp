@@ -4,16 +4,25 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+    // Create new list
     OneWayLinkedList* list = new OneWayLinkedList();
-    list->add(1);
-    list->add(2);
-    list->add(3);
-    list->add(4);
-    list->add(5);
+    // Add some nodes
+    list->addEnd(1);
+    list->addEnd(2);
+    list->addEnd(3);
+    list->addEnd(4);
+    list->addEnd(5);
+    list->addEnd(110);
+    list->addBegin(100);
 
+    // Print all nodes
     list->print();
 
-    delete list;
+    // Delete all nodes
+    list->deleteAll();
+
+    // Print all nodes
+    list->print();
 
     return 0;
 }
