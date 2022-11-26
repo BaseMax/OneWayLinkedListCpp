@@ -47,6 +47,9 @@ public:
     // Get the node by searching with data
     Node* getNode(int data);
 
+    // Delete a node with a specific data
+    void deleteNode(int data);
+
     // Get the node by searching with index
     Node* getNodeByIndex(int index);
 
@@ -64,4 +67,10 @@ public:
 
     // Delete a node before a node with a specific index
     void deleteNodeBeforeIndex(int index);
+
+    // Count number of nodes
+    int count();
+
+    // Count number of nodes with a recursive function
+    int countRecursive(Node* node);
 };

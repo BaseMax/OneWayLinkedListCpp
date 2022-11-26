@@ -261,6 +261,25 @@ void OneWayLinkedList::deleteNodeBeforeIndex(int index) {
     }
 }
 
+// Count number of nodes
+int OneWayLinkedList::count() {
+    int count = 0;
+    Node* node = this->head;
+    while (node != NULL) {
+        count++;
+        node = node->next;
+    }
+    return count;
+}
+
+// Count number of nodes with a recursive function
+int OneWayLinkedList::countRecursive(Node* node) {
+    if (node == NULL) {
+        return 0;
+    }
+    return 1 + countRecursive(node->next);
+}
+
 // Support delete operator
 // OneWayLinkedList::~OneWayLinkedList() {
 //     this->deleteAll();
