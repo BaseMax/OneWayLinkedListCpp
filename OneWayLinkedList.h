@@ -47,6 +47,9 @@ public:
     // Get the node by searching with data
     Node* getNode(int data);
 
+    // Check there is a node with a specific data in the list or not
+    int hasNode(int data);
+
     // Delete a node with a specific data
     void deleteNode(int data);
 

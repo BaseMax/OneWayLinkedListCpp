@@ -77,6 +77,16 @@ Node* OneWayLinkedList::getNode(int data) {
     return NULL;
 }
 
+// Check there is a node with a specific data in the list or not
+int OneWayLinkedList::hasNode(int data) {
+    Node* node = this->head;
+    while(node != NULL) {
+        if(node->data == data) return 1;
+        node = node->next;
+    }
+    return 0;
+}
+
 // Get the first node
 Node* OneWayLinkedList::getFirstNode() {
     return this->head;
@@ -299,7 +309,7 @@ int OneWayLinkedList::countRecursive(Node* node) {
     return 1 + countRecursive(node->next);
 }
 
-// Reverse the list
+// Reverse the list, O(n)
 void OneWayLinkedList::reverse() {
     Node* prev = NULL;
     Node* current = this->head;
@@ -313,7 +323,7 @@ void OneWayLinkedList::reverse() {
     this->head = prev;
 }
 
-// Reverse the list with a recursive function
+// Reverse the list with a recursive function, O(n)
 void OneWayLinkedList::reverseRecursive(Node* node) {
     // If the node is the last node
     if (node->next == NULL) {
