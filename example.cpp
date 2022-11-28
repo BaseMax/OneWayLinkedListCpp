@@ -97,10 +97,29 @@ int main(int argc, char** argv) {
         cout << "Node not found" << endl;
     }
 
+    // Deep copy the list
+    cout << "Deep copy the list" << endl;
+    OneWayLinkedList* list2 = new OneWayLinkedList();
+    list2 = list->deepCopy();
+
+    // Deep copy the nodes
+    Node* node2 = list->deepCopyNodes();
+    if (node2 == NULL) {
+        cout << "Node not found" << endl;
+    } else {
+        cout << "Node data: " << node2->data << endl;
+    }
+
     // Delete all nodes
+    cout << "Delete all nodes" << endl;
     list->deleteAll();
 
     // Print all nodes
+    cout << "Print the new list" << endl;
+    list2->print();
+
+    // Print all nodes
+    cout << "Print the first list" << endl;
     list->print();
 
     // Print the size of the list

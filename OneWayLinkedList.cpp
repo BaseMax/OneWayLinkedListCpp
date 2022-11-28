@@ -297,6 +297,42 @@ void OneWayLinkedList::deleteNodeBeforeIndex(int index) {
     }
 }
 
+// Maloc a new node
+Node* OneWayLinkedList::mallocNode(int data) {
+    Node* node = new Node(data);
+    return node;
+}
+
+// Deep copy
+// Buggy
+OneWayLinkedList* OneWayLinkedList::deepCopy() {
+    OneWayLinkedList* newList = new OneWayLinkedList();
+    Node* node = this->head;
+    while (node != NULL) {
+        newList->addEnd(node->data);
+        node = node->next;
+    }
+    return newList;
+}
+
+// Deep copy nodes
+Node* OneWayLinkedList::deepCopyNodes() {
+    Node* node = this->head;
+    Node* prev = NULL;
+    Node* newHead = NULL;
+    while (node != NULL) {
+        Node* newNode = mallocNode(node->data);
+        if (prev == NULL) {
+            newHead = newNode;
+        } else {
+            prev->next = newNode;
+        }
+        prev = newNode;
+        node = node->next;
+    }
+    return newHead;    
+}
+
 // Count number of nodes
 int OneWayLinkedList::count() {
     int count = 0;

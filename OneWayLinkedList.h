@@ -29,6 +29,12 @@ public:
     // Add new node to the end of the list
     void addEnd(int data);
 
+    // Deep copy
+    OneWayLinkedList* deepCopy();
+
+    // Deep copy nodes
+    Node* deepCopyNodes();
+
     // Print all nodes
     void print();
 
@@ -52,6 +58,9 @@ public:
 
     // Check there is a node with a specific data in the list or not (with a recursive function)
     int hasNodeRecursive(int data, Node* node);
+
+    // Maloc a new node
+    Node* mallocNode(int data);
 
     // Delete a node with a specific data
     void deleteNode(int data);
