@@ -87,6 +87,13 @@ int OneWayLinkedList::hasNode(int data) {
     return 0;
 }
 
+// Check there is a node with a specific data in the list or not (with a recursive function)
+int OneWayLinkedList::hasNodeRecursive(int data, Node* node) {
+    if(node == NULL) return 0;
+    if(node->data == data) return 1;
+    return hasNodeRecursive(data, node->next);
+}
+
 // Get the first node
 Node* OneWayLinkedList::getFirstNode() {
     return this->head;

@@ -50,6 +50,9 @@ public:
     // Check there is a node with a specific data in the list or not
     int hasNode(int data);
 
+    // Check there is a node with a specific data in the list or not (with a recursive function)
+    int hasNodeRecursive(int data, Node* node);
+
     // Delete a node with a specific data
     void deleteNode(int data);
 
