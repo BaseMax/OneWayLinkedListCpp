@@ -26,6 +26,8 @@ This is a simple implementation of a one-way linked-list in C++.
 - **`void reverse()`**: Reverse the list
 - **`void reverseRecursive(Node* node)`**: Reverse the list with a recursive function
 - **`Node* getMiddleNode()`**: Get the middle node
+- **`int OneWayLinkedList::hasNode(int data)`**: Check there is a node with a specific data in the list or not
+- **`int OneWayLinkedList::hasNodeRecursive(int data, Node* node)`**: Check there is a node with a specific data in the list or not (with a recursive function)
 
 ## Usage
 
